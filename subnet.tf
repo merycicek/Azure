@@ -1,6 +1,6 @@
 resource "azurerm_subnet" "private1" { 
 
-  name = "private1" 
+  name = "private${count.index +1}" 
 
   resource_group_name = "${var.resource_group_name}" 
 
@@ -14,7 +14,7 @@ resource "azurerm_subnet" "private1" {
 
 resource "azurerm_subnet" "private2" { 
 
-  name = "private2" 
+  name = "private${count.index +1}" 
 
   resource_group_name = "${var.resource_group_name}" 
 
@@ -28,7 +28,7 @@ resource "azurerm_subnet" "private2" {
 
 resource "azurerm_subnet" "private3" { 
 
-  name = "private3" 
+  name = "private${count.index +1}" 
 
   resource_group_name = "${var.resource_group_name}" 
 
